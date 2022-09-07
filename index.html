@@ -5,13 +5,53 @@
     <title>Our Funky HTML Page</title>
     <meta name="description" content="Our first page">
     <meta name="keywords" content="html tutorial template">
+  
     </head>
     <body>
       <center>
-        <br><br><br>
-        <img src="calmchi.png" alt="calm chihuahua">
-      </center>
-       <embed src="/html/Kalimba.mp3" loop="true" autostart="true" width="2"
-         height="0"> 
+        <p>
+          i can be ur angel.....
+        </p>
+ <img id="img1" src="calmchi.png" />
+  <audio id="audio1" src="duck.mp3"></audio>
+  <script>
+    var audio = document.getElementById("audio1");
+    var img = document.getElementById("img1");
+    
+    function play() {
+      audio.play();
+    }
+    
+    function stop() {
+      audio.pause();
+    }
+    
+    img.addEventListener('click', play);
+    img.addEventListener('mouseover', play);
+    img.addEventListener('mouseout', stop);
+  </script>
+        <br> <br> <br>
+        <p>
+          or ur devil...!!!
+        </p>
+        <img id="img2" src="madchi.jpg" />
+  <audio id="audio2" src="duck.mp3"></audio>
+  <script>
+    var audio = document.getElementById("audio2");
+    var img = document.getElementById("img2");
+    
+    function play() {
+      audio.play();
+    }
+    
+    function stop() {
+      audio.pause();
+    }
+    
+    img.addEventListener('click', play);
+    img.addEventListener('mouseover', play);
+    img.addEventListener('mouseout', stop);
+  </script>
+        </center>
     </body>
     </html>
