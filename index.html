@@ -1,57 +1,58 @@
 
-    <!doctype html>
+<!doctype html>
     <html>
     <head>
-    <title>Our Funky HTML Page</title>
+    <title>angel or devil?</title>
     <meta name="description" content="Our first page">
     <meta name="keywords" content="html tutorial template">
-  
     </head>
-    <body>
-      <center>
-        <p>
-          i can be ur angel.....
-        </p>
- <img id="img1" src="calmchi.png" />
-  <audio id="audio1" src="duck.mp3"></audio>
+<body>
+<center>
+   <br><br><br>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<p>
+      i can be ur angel.....
+  </p>
+   <div id="image1">
+    <img src="calmchi.png">
+    <audio id="audio1">
+    <source src="kkstroll.mp3">
+    </audio>
+  </div>
+  <br><br><br>
+<p>
+or ur devil....!!! 
+  </p>
+
+  <div id="image2">
+    <img src="madchi.jpg">
+    <audio id="audio2">
+    <source src="doomost.mp3">
+    </audio>
+  </div>
+		
   <script>
-    var audio = document.getElementById("audio1");
-    var img = document.getElementById("img1");
-    
-    function play() {
-      audio.play();
-    }
-    
-    function stop() {
-      audio.pause();
-    }
-    
-    img.addEventListener('click', play);
-    img.addEventListener('mouseover', play);
-    img.addEventListener('mouseout', stop);
+    var audio1 = $("#audio1")[0];
+    $("#image1").mouseenter(function() {
+      audio1.play();
+      audio1.loop = true;
+    });
+    $("#image1").mouseleave(function() {
+      audio1.pause();
+    });
   </script>
-        <br> <br> <br>
-        <p>
-          or ur devil...!!!
-        </p>
-        <img id="img2" src="madchi.jpg" />
-  <audio id="audio2" src="duck.mp3"></audio>
+
   <script>
-    var audio = document.getElementById("audio2");
-    var img = document.getElementById("img2");
-    
-    function play() {
-      audio.play();
-    }
-    
-    function stop() {
-      audio.pause();
-    }
-    
-    img.addEventListener('click', play);
-    img.addEventListener('mouseover', play);
-    img.addEventListener('mouseout', stop);
+    var audio2 = $("#audio2")[0];
+    $("#image2").mouseenter(function() {
+      audio2.play();
+      audio2.loop = true;
+    });
+    $("#image2").mouseleave(function() {
+      audio2.pause();
+    });
   </script>
-        </center>
-    </body>
-    </html>
+</center>
+
+</body>
+
